@@ -30,4 +30,5 @@ def prepare (df):
     df= df.set_index(df.date, drop = True)
     #dop columns
     df =df.drop(columns=['date'])
+    df = df[df['endpoint'].notna()]
     return df
