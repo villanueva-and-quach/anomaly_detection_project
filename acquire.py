@@ -91,7 +91,7 @@ def acquire ():
     #acquire second df
     df2 = get_data_from_sql('curriculum_logs', sql_query)
     #drop columns that we don't need
-    df2 = df2.drop(columns =[ 'deleted_at'])
+    df2 = df2.drop(columns =[ 'deleted_at', 'slack'])
     
     #merge
     df = df1.merge(df2, left_on='cohort_id', right_on= 'id', how = 'left')
