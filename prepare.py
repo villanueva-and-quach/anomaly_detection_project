@@ -30,5 +30,10 @@ def prepare (df):
     df= df.set_index(df.date, drop = True)
     #dop columns
     df =df.drop(columns=['date'])
+    #remove observation that have nulls in endpoint
     df = df[df['endpoint'].notna()]
+    #remove only '/'
+    df = df[df.endpoint != '/']
+    #remove everything that have  'toc', 'search', 'jpeg' 'svg'
+    df = df[df.endpoint.str.contains('toc|search|jpg|jpeg|svg') == False]
     return df
