@@ -17,6 +17,11 @@ from sklearn.preprocessing import MinMaxScaler, RobustScaler, StandardScaler
 
 
 def prepare (df):
+    '''
+    Takes in a df and add names to a cohorts that do not have it. fill na wiht zeros
+    change dates to date type, remove from endpoint '/' ,'toc', 'search', 'jpeg' 'svg'
+
+    '''
     #add names to the new cohorts
     df.name[df.cohort_id == 165] = df.name[df.cohort_id == 165].fillna('cohort165')
     df.name[df.cohort_id == 166] = df.name[df.cohort_id == 166].fillna('cohort166')
