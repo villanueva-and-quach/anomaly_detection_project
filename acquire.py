@@ -80,6 +80,10 @@ def report_unique_val (df):
 
 #acquire function
 def acquire ():
+    '''
+    Aquire 2 df one is anonymized-curriculum-access-07-2021.txt  and the second one is the table from sql.
+    return a main df which include the joint of the  2 tables .
+    '''
     #aquire first data frame
     colnames = ['date', 'endpoint', 'user_id', 'cohort_id', 'source_ip']
     df1 = pd.read_csv("anonymized-curriculum-access-07-2021.txt", 
