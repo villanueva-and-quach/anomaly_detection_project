@@ -38,8 +38,6 @@
 |name| cohort name| object |  |
 |start_date| start date of the cohort| datetime64[ns] |  |
 |end_date | end date of the cohort| datetime64[ns] |  |
-|created_at | loan amount| float64 | dollars |
-|updated_at   | Term of loan| float64 | months|
 |program_id| id of the program  | float64 | 0= Unknown, 1 =  Full Stack PHP, 2 = Java, 3 = Data Science, 4 = Front End Program |
 
 
